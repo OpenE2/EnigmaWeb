@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21A44246-AA34-42CC-9B39-B4810841A54D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Krkadoni.EnigmaWeb</RootNamespace>
+    <AssemblyName>Krkadoni.EnigmaWeb</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BouquetItemBouquet.cs" />
+    <Compile Include="BouquetItemMarker.cs" />
+    <Compile Include="BouquetItemService.cs" />
+    <Compile Include="Commands\CommandException.cs" />
+    <Compile Include="Commands\EnigmaCommand.cs" />
+    <Compile Include="Commands\GetBouquetItemsCommand.cs" />
+    <Compile Include="Commands\GetBouquetsCommand.cs" />
+    <Compile Include="Commands\IGetBouquetItemsCommand.cs" />
+    <Compile Include="Commands\IGetBouquetsCommand.cs" />
+    <Compile Include="Commands\IGetCurrentServiceCommand.cs" />
+    <Compile Include="Commands\IMessageCommand.cs" />
+    <Compile Include="Commands\IPowerStateCommand.cs" />
+    <Compile Include="Commands\IReloadSettingsCommand.cs" />
+    <Compile Include="Commands\IRemoteControlCommand.cs" />
+    <Compile Include="Commands\IScreenshotCommand.cs" />
+    <Compile Include="Commands\ISetVolumeCommand.cs" />
+    <Compile Include="Commands\ISignalCommand.cs" />
+    <Compile Include="Commands\IVolumeStatusCommand.cs" />
+    <Compile Include="Commands\IWakeUpCommand.cs" />
+    <Compile Include="Commands\IZapCommand.cs" />
+    <Compile Include="Commands\MessageCommand.cs" />
+    <Compile Include="Commands\PowerStateCommand.cs" />
+    <Compile Include="Commands\ReloadSettingsCommand.cs" />
+    <Compile Include="Commands\RemoteControlCommand.cs" />
+    <Compile Include="Commands\ScreenshotCommand.cs" />
+    <Compile Include="Commands\SetVolumeCommand.cs" />
+    <Compile Include="Commands\SignalCommand.cs" />
+    <Compile Include="Commands\VolumeStatusCommand.cs" />
+    <Compile Include="Commands\WakeUpCommand.cs" />
+    <Compile Include="Commands\ZapCommand.cs" />
+    <Compile Include="ConsoleLog.cs" />
+    <Compile Include="E1Signal.cs" />
+    <Compile Include="E2Signal.cs" />
+    <Compile Include="Enums\EnigmaType.cs" />
+    <Compile Include="Enums\MessageType.cs" />
+    <Compile Include="Enums\ReloadSettingsType.cs" />
+    <Compile Include="Enums\RemoteControlCode.cs" />
+    <Compile Include="Enums\ScreenshotType.cs" />
+    <Compile Include="Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IBouquetItem.cs" />
+    <Compile Include="IBouquetItemBouquet.cs" />
+    <Compile Include="IBouquetItemMarker.cs" />
+    <Compile Include="IBouquetItemService.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="IE1Signal.cs" />
+    <Compile Include="IE2Signal.cs" />
+    <Compile Include="IFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILog.cs" />
+    <Compile Include="IProfile.cs" />
+    <Compile Include="ISignal.cs" />
+    <Compile Include="IVolumeStatus.cs" />
+    <Compile Include="KnownException.cs" />
+    <Compile Include="Parsers\GetBouquetItemsParser.cs" />
+    <Compile Include="Parsers\GetBouquetsParser.cs" />
+    <Compile Include="Parsers\Helpers.cs" />
+    <Compile Include="Parsers\IResponseParser.cs" />
+    <Compile Include="IWebRequester.cs" />
+    <Compile Include="Parsers\IUnparsedParser.cs" />
+    <Compile Include="Parsers\ParsingException.cs" />
+    <Compile Include="Parsers\PowerStateParser.cs" />
+    <Compile Include="Parsers\SignalParser.cs" />
+    <Compile Include="Parsers\UnparsedParser.cs" />
+    <Compile Include="Parsers\VolumeStatusParser.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Commands\GetCurrentServiceCommand.cs" />
+    <Compile Include="Parsers\GetCurrentServiceParser.cs" />
+    <Compile Include="Responses\GetBouquetItemsResponse.cs" />
+    <Compile Include="Responses\GetBouquetsResponse.cs" />
+    <Compile Include="Responses\GetCurrentServiceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Responses\IGetBouquetItemsResponse.cs" />
+    <Compile Include="Responses\IGetBouquetsResponse.cs" />
+    <Compile Include="Responses\IPowerStateResponse.cs" />
+    <Compile Include="Responses\IScreenshotResponse.cs" />
+    <Compile Include="Responses\ISignalResponse.cs" />
+    <Compile Include="Responses\IVolumeStatusResponse.cs" />
+    <Compile Include="Responses\PowerStateResponse.cs" />
+    <Compile Include="Responses\ScreenshotResponse.cs" />
+    <Compile Include="Responses\SignalResponse.cs" />
+    <Compile Include="Responses\UnparsedResponse.cs" />
+    <Compile Include="Responses\IUnparsedResponse.cs" />
+    <Compile Include="Responses\IGetCurrentServiceResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Responses\IResponse.cs" />
+    <Compile Include="Responses\VolumeStatusResponse.cs" />
+    <Compile Include="TimeOutException.cs" />
+    <Compile Include="VolumeStatus.cs" />
+    <Compile Include="WebRequester.cs" />
+    <Compile Include="WebRequestException.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
