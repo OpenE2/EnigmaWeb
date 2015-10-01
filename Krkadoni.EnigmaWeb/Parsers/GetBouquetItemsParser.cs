@@ -47,7 +47,7 @@ namespace Krkadoni.Enigma.Parsers
             for (int i = 0; i <= lines.Length - 2; i++)
             {
                 string reference = lines[i].Substring(0, lines[i].IndexOf(";", StringComparison.Ordinal)).Trim();
-                IBouquetItem item = InitializeItem(reference);
+                IBouquetItem item = InitializeItem(reference, EnigmaType.Enigma1);
                 if (item == null) continue;
                 string name = lines[i].Substring(lines[i].IndexOf(";", StringComparison.Ordinal) + 1).Trim();
                 if (name.IndexOf(";", StringComparison.Ordinal) > -1)
@@ -79,7 +79,7 @@ namespace Krkadoni.Enigma.Parsers
                                 if (item != null)
                                     items.Add(item);
 
-                                item = InitializeItem(reader.Value);
+                                item = InitializeItem(reader.Value, EnigmaType.Enigma2);
 
                                 if (item != null)
                                     item.Reference = reader.Value;
@@ -101,13 +101,15 @@ namespace Krkadoni.Enigma.Parsers
             return _factory.GetBouquetItemsResponse(items);
         }
 
-        private IBouquetItem InitializeItem(string reference)
+        private IBouquetItem InitializeItem(string reference, EnigmaType enigmaType)
         {
             if (String.IsNullOrEmpty(reference))
                 return null;
 
             if (reference.StartsWith("1:0:1"))
-                return _factory.BouquetItemService();
+            {
+                return enigmaType == EnigmaType.Enigma2 ? _factory.BouquetItemService() : _factory.BouquetItemServiceE1();
+            }           
 
             if (reference.StartsWith("1:64"))
             {

@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="BouquetItemBouquet.cs" />
     <Compile Include="BouquetItemMarker.cs" />
+    <Compile Include="BouquetItemServiceE1.cs" />
     <Compile Include="BouquetItemService.cs" />
     <Compile Include="Commands\CommandException.cs" />
     <Compile Include="Commands\EnigmaCommand.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="IBouquetItem.cs" />
     <Compile Include="IBouquetItemBouquet.cs" />
     <Compile Include="IBouquetItemMarker.cs" />
+    <Compile Include="IBouquetItemServiceE1.cs" />
     <Compile Include="IBouquetItemService.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="IE1Signal.cs" />

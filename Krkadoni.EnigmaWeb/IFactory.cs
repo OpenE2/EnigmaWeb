@@ -13,6 +13,7 @@ namespace Krkadoni.Enigma
         IGetCurrentServiceResponse GetCurrentServiceResponse();
         IResponseParser<IGetCurrentServiceCommand, IGetCurrentServiceResponse> GetCurrentServiceParser();
         IBouquetItemService BouquetItemService();
+        IBouquetItemServiceE1 BouquetItemServiceE1();
         IBouquetItemMarker BouquetItemMarker();
         IWebRequester WebRequester();
         IWakeUpCommand WakeUpCommand();

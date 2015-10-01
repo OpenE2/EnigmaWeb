@@ -14,6 +14,7 @@ namespace Krkadoni.Enigma
         private string _password;
         private bool _useSsl;
         private string _username;
+        private int _streamingPort;
 
         public Profile()
         {
@@ -100,6 +101,17 @@ namespace Krkadoni.Enigma
             {
                 if (value.Equals(_useSsl)) return;
                 _useSsl = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int StreamingPort
+        {
+            get { return _streamingPort; }
+            set
+            {
+                if (value.Equals(_streamingPort)) return;
+                _streamingPort = value;
                 OnPropertyChanged();
             }
         }

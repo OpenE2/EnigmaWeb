@@ -294,5 +294,10 @@ namespace Krkadoni.Enigma
         {
             return new UnparsedParser<IReloadSettingsCommand>();
         }
+
+        public IBouquetItemServiceE1 BouquetItemServiceE1()
+        {
+            return new BouquetItemServiceE1();
+        }
     }
 }

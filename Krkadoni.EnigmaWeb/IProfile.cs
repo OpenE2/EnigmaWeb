@@ -11,5 +11,6 @@ namespace Krkadoni.Enigma
         string Address { get; set; }
         int HttpPort { get; set; }
         bool UseSsl { get; set; }
+        int StreamingPort { get; set; }
     }
 }

@@ -40,9 +40,10 @@ namespace Krkadoni.Enigma.Parsers
 
         protected virtual IGetCurrentServiceResponse ParseE1(string response)
         {
-            IBouquetItemService service = _factory.BouquetItemService();
+            IBouquetItemServiceE1 service = _factory.BouquetItemServiceE1();
             service.Name = GetE1StatusValue(response, @"var serviceName = """);
             service.Reference = GetE1StatusValue(response, @"var serviceReference = """);
+            service.VlcParms = GetE1StatusValue(response, @"var vlcparms = """);
             return _factory.GetCurrentServiceResponse(service);
         }
 
