@@ -116,6 +116,11 @@ namespace Krkadoni.Enigma
             }
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

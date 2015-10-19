@@ -31,6 +31,11 @@ namespace Krkadoni.Enigma
             }
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
