@@ -55,6 +55,10 @@ namespace Krkadoni.Enigma
 
                 await Task.WhenAny(task, Task.Delay(60000, token));
                 token.ThrowIfCancellationRequested();
+
+                if (!task.IsCompleted)
+                    throw new OperationCanceledException();
+                
                 var response = (HttpWebResponse) task.Result;
 
                 string result = null;
