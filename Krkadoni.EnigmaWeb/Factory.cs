@@ -299,5 +299,25 @@ namespace Krkadoni.Enigma
         {
             return new BouquetItemServiceE1();
         }
+
+        public IGetStreamParametersCommand GetStreamParametersCommand()
+        {
+            return new GetStreamParametersCommand(this);
+        }
+
+        public IGetStreamParametersResponse GetStreamParametersResponse()
+        {
+            return new GetStreamParametersResponse(null);
+        }
+
+        public IGetStreamParametersResponse GetStreamParametersResponse(string response)
+        {
+            return new GetStreamParametersResponse();
+        }
+
+        public IResponseParser<IGetStreamParametersCommand, IGetStreamParametersResponse> GetStreamParametersParser()
+        {
+            return new GetStreamParametersParser(this);
+        }
     }
 }

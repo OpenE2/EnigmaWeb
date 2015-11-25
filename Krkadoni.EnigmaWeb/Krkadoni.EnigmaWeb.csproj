@@ -134,6 +134,11 @@
     <Compile Include="VolumeStatus.cs" />
     <Compile Include="WebRequester.cs" />
     <Compile Include="WebRequestException.cs" />
+    <Compile Include="Commands\IGetStreamParametersCommand.cs" />
+    <Compile Include="Responses\IGetStreamParametersResponse.cs" />
+    <Compile Include="Parsers\GetStreamParametersParser.cs" />
+    <Compile Include="Responses\GetStreamParametersResponse.cs" />
+    <Compile Include="Commands\GetStreamParametersCommand.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
