@@ -139,6 +139,8 @@
     <Compile Include="Parsers\GetStreamParametersParser.cs" />
     <Compile Include="Responses\GetStreamParametersResponse.cs" />
     <Compile Include="Commands\GetStreamParametersCommand.cs" />
+    <Compile Include="Commands\SleepCommand.cs" />
+    <Compile Include="Commands\ISleepCommand.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -319,5 +319,25 @@ namespace Krkadoni.Enigma
         {
             return new GetStreamParametersParser(this);
         }
+
+        public virtual ISleepCommand SleepCommand()
+        {
+            return new SleepCommand(this);
+        }
+
+        public virtual IResponse<ISleepCommand> SleepResponse()
+        {
+            return new UnparsedResponse<ISleepCommand>(null);
+        }
+
+        public virtual IResponse<ISleepCommand> SleepResponse(string response)
+        {
+            return new UnparsedResponse<ISleepCommand>(response);
+        }
+
+        public virtual IResponseParser<ISleepCommand, IResponse<ISleepCommand>> SleepParser()
+        {
+            return new UnparsedParser<ISleepCommand>();
+        }
     }
 }
