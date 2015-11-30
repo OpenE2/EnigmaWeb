@@ -28,17 +28,17 @@ namespace Krkadoni.Enigma.Commands
                     case ScreenshotType.All:
                         url = profile.Enigma == EnigmaType.Enigma1
                             ? "body?mode=controlScreenShot&blendtype=2"
-                            : "grab?format=jpg&r=720&&filename=/tmp/" + UnixTimeStamp() + ".jpg";
+                            : "grab?format=jpg&mode=all&r=720&&filename=/tmp/" + UnixTimeStamp() + ".jpg";
                         break;
                     case ScreenshotType.Picture:
                         url = profile.Enigma == EnigmaType.Enigma1
                             ? "body?mode=controlScreenShot"
-                            : "grab?format=jpg&r=720&&v=&filename=/tmp/" + UnixTimeStamp() + ".jpg";
+                            : "grab?format=jpg&mode=video&r=720&v=&filename=/tmp/" + UnixTimeStamp() + ".jpg";
                         break;
                     case ScreenshotType.Osd:
                         url = profile.Enigma == EnigmaType.Enigma1
                             ? "body?mode=controlFBShot"
-                            : "grab?format=jpg&r=720&&o=&n=&filename=/tmp/" + UnixTimeStamp() + ".jpg";
+                            : "grab?format=jpg&mode=osd&r=720&o=&n=&filename=/tmp/" + UnixTimeStamp() + ".jpg";
                         break;
                     default:
                         throw new NotSupportedException();
