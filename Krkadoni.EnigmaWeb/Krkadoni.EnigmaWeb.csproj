@@ -141,6 +141,8 @@
     <Compile Include="Commands\GetStreamParametersCommand.cs" />
     <Compile Include="Commands\SleepCommand.cs" />
     <Compile Include="Commands\ISleepCommand.cs" />
+    <Compile Include="Commands\IRestartCommand.cs" />
+    <Compile Include="Commands\RestartCommand.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

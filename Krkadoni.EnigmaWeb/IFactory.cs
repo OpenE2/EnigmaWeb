@@ -139,5 +139,13 @@ namespace Krkadoni.Enigma
 
         IResponseParser<ISleepCommand, IResponse<ISleepCommand>> SleepParser();
 
+        IRestartCommand RestartCommand();
+
+        IResponse<IRestartCommand> RestartResponse();
+
+        IResponse<IRestartCommand> RestartResponse(string response);
+
+        IResponseParser<IRestartCommand, IResponse<IRestartCommand>> RestartParser();
+
     }
 }

@@ -339,5 +339,25 @@ namespace Krkadoni.Enigma
         {
             return new UnparsedParser<ISleepCommand>();
         }
+
+        public virtual IRestartCommand RestartCommand()
+        {
+            return new RestartCommand(this);
+        }
+
+        public virtual IResponse<IRestartCommand> RestartResponse()
+        {
+            return new UnparsedResponse<IRestartCommand>(null);
+        }
+
+        public virtual IResponse<IRestartCommand> RestartResponse(string response)
+        {
+            return new UnparsedResponse<IRestartCommand>(response);
+        }
+
+        public virtual IResponseParser<IRestartCommand, IResponse<IRestartCommand>> RestartParser()
+        {
+            return new UnparsedParser<IRestartCommand>();
+        }
     }
 }
